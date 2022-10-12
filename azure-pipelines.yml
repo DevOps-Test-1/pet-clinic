@@ -32,6 +32,11 @@ steps:
     sonarQubeGradlePluginVersion: '3.3'
     spotBugsAnalysis: false
 
+- task: sonarcloud-buildbreaker@2
+  inputs:
+    SonarCloud: 'Sonarcloud'
+    organization: 'devops-test-1'
+
 - task: dependency-check-build-task@6
   inputs:
     projectName: 'pet-clinic'
